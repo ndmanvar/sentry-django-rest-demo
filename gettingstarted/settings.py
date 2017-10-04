@@ -40,7 +40,18 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'raven.contrib.django.raven_compat',
 )
+
+# RAVEN start
+import raven
+
+RAVEN_CONFIG = {
+    'dsn': 'https://5628643adff74f09ab15ef242d3faddd:6fff0440c656404881a4534e87cdb55b@sentry.io/225677',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    # 'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -48,6 +59,7 @@ REST_FRAMEWORK = {
     ],
     'PAGE_SIZE': 10
 }
+# RAVEN end
 
 MIDDLEWARE_CLASSES = (
     # Simplified static file serving.

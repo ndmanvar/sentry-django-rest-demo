@@ -1,10 +1,13 @@
+contextlib2==0.5.5
 dj-database-url==0.4.2
 Django==1.11.5
 djangorestframework==3.6.4
 pbr==3.1.1
 pytz==2017.2
+raven==6.2.1
 six==1.10.0
 stevedore==1.24.0
 virtualenv==15.1.0
 virtualenv-clone==0.2.6
 virtualenvwrapper==4.7.2
+whitenoise==3.3.1
